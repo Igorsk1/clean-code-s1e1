@@ -10,15 +10,15 @@ body {
   display: block;
   text-align: right;
 }
-.header img {
+.header__img {
   width: 100%;
 }
-.header .header_info {
+.header__link {
   font-family: fantasy, cursive;
 }
 
 @media (max-width:768px) {
-  .aaa { 
+  .header { 
     text-align: center;
 }
 }
@@ -27,12 +27,13 @@ body {
   width: 500px;
   margin: 0 auto 0;
 }
-.task {
+.section_add-task .list__input,
+.list__input {
   width: 56%;
   display: inline-block;
   flex-grow: 1;
 }
-.task-row-wrapper {
+.list__item {
   display: flex;
 }
 ul {
@@ -91,6 +92,18 @@ label[for="new-task"] {
   display: block;
   margin: 0 0 20px;
 }
+
+.hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+
 input#new-task {
   width: 318px;
 }
@@ -121,12 +134,12 @@ li > label {
 li >    input[type="text"] {
   width: 226px;
 }
-button.delete img {
+.list__btn-img {
   height: 2em;
   transform: rotateZ(45deg);
   transition: transform 200ms ease-in;
 }
-button.delete img:hover {
+.list__btn-img:hover {
   transform: rotateZ(0);
 }
 
@@ -141,11 +154,11 @@ ul li input[type=text] {
   display: none;
 }
 
-ul li.editMode input[type=text] {
+.list__item_editmode .list__input {
   display: inline-block;
   width: 224px;
 }
 
-ul li.editMode label {
+.list__item_editmode .list__label {
   display: none;
 }
