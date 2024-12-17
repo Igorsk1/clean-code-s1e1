@@ -127,6 +127,10 @@ button {
   align-items: center;
 }
 
+.section_add-task .list__item {
+  border-bottom: none;
+}
+
 .list__item > * {
   vertical-align: middle;
 }
